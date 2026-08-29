@@ -251,11 +251,12 @@
     <header>
         <h1>Eligibility Highlighter</h1>
         <p>Upload the weekly ineligibility PDF, enter your group roster, and download a highlighted copy.</p>
+
     </header>
 
     <!-- Step 1: PDF Upload -->
     <div class="card">
-        <div class="step-label">Step 1 — Upload ineligibility PDF</div>
+        <div class="step-label">Step 1 — Enter ineligibility PDF</div>
         <div class="drop-zone" id="dropZone">
             <input type="file" id="pdfInput" accept=".pdf" />
             <span class="drop-icon">📄</span>
@@ -268,6 +269,7 @@
     <div class="card">
         <div class="step-label">Step 2 — Group roster (students to find)</div>
         <p class="hint">One name per line. Use the same format as the PDF — usually <strong>Last, First</strong> or <strong>First Last</strong>. Partial last names also work.</p>
+        <p class="hint">It may be useful to save a text file with your student list you can copy and paste here each week</p>
         <textarea id="namesInput" placeholder="Smith, John&#10;Johnson, Emily&#10;Williams, Marcus&#10;Davis, Sarah"></textarea>
         <label class="check-option">
             <input type="checkbox" id="fuzzyCheck" checked />
@@ -322,6 +324,19 @@
 
     <!-- Download -->
     <div class="gap" id="downloadArea" style="display:none;"></div>
+
+    <div style="margin-top: 5rem;">
+        <p style="margin-bottom: 2rem;">Eligibility Highlighter is offered at no cost, but if it saves you time,  tips are happily accepted.</p>
+        <script async
+                src="https://js.stripe.com/v3/buy-button.js">
+        </script>
+
+        <stripe-buy-button
+                buy-button-id="buy_btn_1U9necGigkdWOthUCRq7olT4"
+                publishable-key="pk_live_51Sr83eGigkdWOthURhC40DanNWlonxv95Qs3mFhAmTm51QAUaZI701UuGgkBguqdUofQPHP9daxfz4X3mbALWKl000M0iNppEX"
+        >
+        </stripe-buy-button>
+    </div>
 
 </div>
 
